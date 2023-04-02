@@ -2107,7 +2107,7 @@ end)
 end
 end)
 
-Main:AddToggle("Tự Động Cày Haki Quan Sát",_G.AutoObservation,function(value)
+Main:AddToggle("Tự Động Cày Haki Quan Sát",true,function(value)
 _G.AutoObservation = value
 StopTween(_G.AutoObservation)
 end)
@@ -2129,7 +2129,7 @@ end)
 end
 end)
 
-Main:AddToggle("Đổi Sever Khi Hết Điểm Né",_G.AutoObservation_Hop,function(value)
+Main:AddToggle("Đổi Sever Khi Hết Điểm Né",true,function(value)
 _G.AutoObservation_Hop = value
 end)
 
