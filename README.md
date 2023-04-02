@@ -2095,6 +2095,18 @@ local RenUi = library:AddWindow("THANH TRẦN 2005",Enum.KeyCode.RightControl)
 local Main = RenUi:AddTab("Tự Động Đánh","6026568198")
 
 --------------------------------------------------------------------
+Main:AddSeperator("Haki Quan Sát")
+
+local ObservationRange = Main:AddLabel("")
+
+spawn(function()
+while wait() do
+pcall(function()
+ObservationRange:Set("Observation Range Level : "..math.floor(game:GetService("Players").LocalPlayer.VisionRadius.Value))
+end)
+end
+end)
+
 Main:AddToggle("Tự Động Cày Haki Quan Sát",_G.AutoObservation,function(value)
 _G.AutoObservation = value
 StopTween(_G.AutoObservation)
